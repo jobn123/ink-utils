@@ -12,74 +12,65 @@
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
 	else if(typeof exports === 'object')
-		exports["inkUtils"] = factory();
+		exports["ink-utils"] = factory();
 	else
-		root["inkUtils"] = factory();
+		root["ink-utils"] = factory();
 })(self, function() {
 return /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
-
-/***/ "./src/func/bind.js":
-/*!**************************!*\
-  !*** ./src/func/bind.js ***!
-  \**************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("const call = __webpack_require__(/*! ./call */ \"./src/func/call.js\")\n\nmodule.exports = (Fn, obj, ...args) => {\n  return (...args2) => call.call(Fn, obj, ...args, ...args2)\n}\n\n//# sourceURL=webpack://inkUtils/./src/func/bind.js?");
-
-/***/ }),
-
-/***/ "./src/func/call.js":
-/*!**************************!*\
-  !*** ./src/func/call.js ***!
-  \**************************/
-/***/ ((module) => {
-
-eval("module.exports =  {\n  call: (Fn, obj, ...args) => {\n    // 如果obj为null,undefined 指向全局\n    if (obj === undefined || obj === null) {\n      obj = globalThis\n    }\n    // 创建临时方法\n    obj.temp = Fn\n    // 调用temp方法\n    let result = obj.temp(...args)\n    // 删除临时方法\n    delete obj.temp\n    // 返回结果\n    return result\n  }\n}\n\n//# sourceURL=webpack://inkUtils/./src/func/call.js?");
-
-/***/ }),
 
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("const bind = __webpack_require__(/*! ./func/bind */ \"./src/func/bind.js\")\n\n// \nfunction add(a, b) {\n  console.log(a + b + this.c)\n  return a + b + this.c\n}\n\nlet obj = {\n  c: 3\n}\n\nglobalThis.c = 100\n\n// let fn = bind(add, obj, 1, 2)\n// console.log(fn())\n\nlet fn = bind(add, obj)\nconsole.log(fn(1, 2))\n\n//# sourceURL=webpack://inkUtils/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"add\": () => (/* binding */ add)\n/* harmony export */ });\n// const bind = require('./func/bind')\n\n// // \n// function add(a, b) {\n//   console.log(a + b + this.c)\n//   return a + b + this.c\n// }\n\n// let obj = {\n//   c: 3\n// }\n\n// globalThis.c = 100\n\n// // let fn = bind(add, obj, 1, 2)\n// // console.log(fn())\n\n// let fn = bind(add, obj)\n// console.log(fn(1, 2))\n// const obj = require('./obj')\n\n// console.log(obj.merge({a:1, b:2}, {c: 3}))\n\n// require('./obj/index')\n\n// module.exports = {\n//   obj: require('./obj/index')\n// }\n// module.exports = {\n//   obj\n// }\n\nfunction add () {\n  console.log('====')\n}\n\n//# sourceURL=webpack://ink-utils/./src/index.js?");
 
 /***/ })
 
 /******/ 	});
 /************************************************************************/
-/******/ 	// The module cache
-/******/ 	var __webpack_module_cache__ = {};
+/******/ 	// The require scope
+/******/ 	var __webpack_require__ = {};
 /******/ 	
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/ 		// Check if module is in cache
-/******/ 		if(__webpack_module_cache__[moduleId]) {
-/******/ 			return __webpack_module_cache__[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			// no module.id needed
-/******/ 			// no module.loaded needed
-/******/ 			exports: {}
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
 /******/ 		};
+/******/ 	})();
 /******/ 	
-/******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
 /******/ 	
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
 /******/ 	
 /************************************************************************/
 /******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
+/******/ 	var __webpack_exports__ = {};
+/******/ 	__webpack_modules__["./src/index.js"](0, __webpack_exports__, __webpack_require__);
 /******/ 	
 /******/ 	return __webpack_exports__;
 /******/ })()
