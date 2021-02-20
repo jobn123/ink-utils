@@ -3,7 +3,7 @@
  * @param {*} arr 
  * @param {*} cb 
  */
-module.exports = (arr, cb) => {
+export function filter(arr, cb) {
   let result = []
 
   for (let i = 0; i < arr.length; i++) {

@@ -3,7 +3,7 @@
  * chunk([1,2,3,4,5,6,7,8,9], 3) [[1,2,3], [4,5,6], [7,8,9]]
  * @param {Array} arr 
  */
-module.exports = (arr, size=1) => {
+export function chunk(arr, size=1) {
   let result = []
   let temp = []
 

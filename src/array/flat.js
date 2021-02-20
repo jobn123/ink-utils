@@ -3,10 +3,11 @@
  * flat([1,2,[3,4,5,[6, 7]]])
  * @param {*} arr 
  */
-module.exports = (arr) => {
+
+export function flat(flatarr) {
   const result = []
 
-  const flat = (flatarr) => {
+  const flat = () => {
     flatarr.forEach(item => {
       if (Array.isArray(item)) {
         result = result.concat(flat(item))

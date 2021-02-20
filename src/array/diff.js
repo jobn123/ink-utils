@@ -3,7 +3,7 @@
  * diff([1,2,3], [3,4,5]) [1,2]
  * @param {Array} arr 
  */
-module.exports = (arr, arr2=[]) => {
+export function diff(arr, arr2=[]) {
   if (arr.length === 0) {
     return []
   }

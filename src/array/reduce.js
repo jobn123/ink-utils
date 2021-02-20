@@ -6,7 +6,7 @@
  * @param {*} cb 
  * @param {*} initVal 
  */
-module.exports = (arr, cb, initVal) => {
+export function reduce (arr, cb, initVal) {
   let result = initVal
 
   for (let i = 0; i < arr.length; i++) {

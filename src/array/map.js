@@ -1,6 +1,6 @@
 // 返回一个计算后的新数组
 
-module.exports = (arr, cb) => {
+export function map(arr, cb) {
   let result = []
 
   for (let i = 0; i < arr.length; i++) {

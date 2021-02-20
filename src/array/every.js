@@ -3,7 +3,7 @@
  * @param {*} arr 
  * @param {*} cb 
  */
-module.exports = (arr, cb) => {
+export function every(arr, cb) {
 
   for (let i = 0; i < arr.length; i++) {
     if (!cb(arr[i], i)) {

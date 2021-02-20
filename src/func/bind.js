@@ -1,5 +1,5 @@
-const call = require('./call')
+import { call } from './call'
 
-module.exports = (Fn, obj, ...args) => {
+export function bind(Fn, obj, ...args) {
   return (...args2) => call.call(Fn, obj, ...args, ...args2)
 }

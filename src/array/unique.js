@@ -2,7 +2,7 @@
  * 数组去重
  * @param {*} arr 
  */
-module.exports = (arr) => {
+export function unique (arr) {
   // let result = []
 
   // arr.forEach(item => {

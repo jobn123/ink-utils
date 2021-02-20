@@ -3,7 +3,7 @@
 // 为时间设置一个时间间隔，只有超过时间间隔事件才触发
 // 在规定时间间隔内只能执行一次
 
-module.exports = (cb, wait) => {
+export function throttle(cb, wait) {
   // 定义开始时间
   let start = 0
   return (e) => { 

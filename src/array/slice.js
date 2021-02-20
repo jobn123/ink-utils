@@ -2,7 +2,7 @@
  * 数组切片
  * @param {*} arr 
  */
-module.exports = (arr, start, end) => {
+export function slice(arr, start, end) {
   // let result = []
 
   // for (let i = start; i < end; i++) {
