@@ -24,3 +24,5 @@ const emmiter = {
     }
   }
 }
+
+export default emmiter
